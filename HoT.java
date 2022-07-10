@@ -1,8 +1,16 @@
 import java.util.Random;
+import java.util.Scanner;
+
 class HoT{
 public static void main(String[] args){
     int i,x=0,h=0,t=0;
-    Random rnd = new Random(); 
+    Random rnd = new Random();
+    
+Scanner sc = new Scanner(System.in);
+System.out.println("Who are you?");
+String name = sc.next();    
+System.out.println("Hello, "+name+"!");
+
 System.out.println("Tossing a coin...");
 for(i=1;i<=3;i++){
 x = rnd.nextInt(2);
@@ -17,8 +25,10 @@ else{
 }
 }
 System.out.println("Heads:"+h+",Tails:"+t);
-if(h > t) System.out.println("You won");
-else System.out.println("You lost");
+if(h > t) System.out.println(name+" won!");
+else System.out.println(name+" lost!");
+
+//>>>>>>> user_name
 }
 
 }
